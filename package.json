@@ -1,0 +1,27 @@
+{
+  "name": "topolr-module-baseui",
+  "version": "0.0.1",
+  "description": "baseui of topolr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/topolr-org/topolr-module-baseui.git"
+  },
+  "keywords": [
+    "baseui",
+    "topolr"
+  ],
+  "author": "hou80houzhu (Wangjinliang)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/topolr-org/topolr-module-baseui/issues"
+  },
+  "homepage": "https://github.com/topolr-org/topolr-module-baseui#readme",
+  "dependencies": {
+    "topolr": "^1.4.8",
+    "topolr-module-icon": "^1.0.1"
+  }
+}
