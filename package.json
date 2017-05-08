@@ -1,10 +1,9 @@
 {
   "name": "topolr-module-baseui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "baseui of topolr",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,6 +14,9 @@
     "topolr"
   ],
   "author": "hou80houzhu (Wangjinliang)",
+  "topolr": {
+    "basePath": "./com/topolr/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/topolr-org/topolr-module-baseui/issues"
