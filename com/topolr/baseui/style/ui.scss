@@ -1,4 +1,4 @@
-.arealoading{
+.mt-arealoading{
     position:absolute;
     left:0;
     top:0;
@@ -17,7 +17,7 @@
     box-orient: horizontal;
     box-pack: center;
     box-align: center;
-    .arealoading-mask{
+    .mt-arealoading-mask{
         position:absolute;
         left:0;
         top:0;
@@ -25,7 +25,7 @@
         bottom:0;
         background:rgba(0,0,0,.1);
     }
-    .arealoading-con{
+    .mt-arealoading-con{
         line-height:40px;
         background:white;
         border-radius: 2px;
@@ -34,19 +34,19 @@
         line-height:40px;
         display:flex;
         position:relative;
-        .arealoading-icon{
+        .mt-arealoading-icon{
             width:40px;
             text-align: center;
         }
-        .arealoading-desc{
+        .mt-arealoading-desc{
             padding:0 20px 0 0;
             flex:1;
         }
     }
-    .icon-state-error{
+    .mt-icon-state-error{
         color:indianred;
     }
-    .icon-state-success{
+    .mt-icon-state-success{
         color:limegreen;
     }
 }

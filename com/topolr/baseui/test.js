@@ -1,6 +1,7 @@
 /**
  * @packet baseui.test;
  * @require baseui.loading;
+ * @require icon.iconpreviewer;
  */
 Option({
     name:'boot',
@@ -9,6 +10,8 @@ Option({
             onendinit:function () {
                 this.addChild({
                     type:"@loading.area"
+                }).then(function (area) {
+                    area.showError("loading...");
                 });
             }
         }
