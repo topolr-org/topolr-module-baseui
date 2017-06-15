@@ -1,6 +1,6 @@
 {
   "name": "topolr-module-baseui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "baseui of topolr",
   "main": "index.js",
   "scripts": {
