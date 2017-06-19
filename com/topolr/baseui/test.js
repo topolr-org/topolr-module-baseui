@@ -7,7 +7,7 @@
 Module({
     name:"test",
     extend:"view",
-    template:"<div>{{data.text}}</div>",
+    template:"<div style='height:300px'>{{data.text}}</div>",
     option:{
         text:""
     },

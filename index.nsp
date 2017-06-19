@@ -25,8 +25,8 @@
                 "icon.tm": "e56fe701bb",
                 "icon.weather": "a0fbd27b12",
                 "baseui.loading": "2ff6e99a89",
-                "baseui.popup": "b76f27efba",
-                "baseui.test": "ac68605f34"
+                "baseui.popup": "87f747c42a",
+                "baseui.test": "7018b3070b"
             },
             "c": {
                 "icon.style.icon": "312bbc92d8",
@@ -35,10 +35,10 @@
             },
             "t": {
                 "icon.template.temp": "8397de88de",
-                "baseui.template.temp": "ed61e8b9af"
+                "baseui.template.temp": "a0f70c078e"
             },
             "y": {
-                "baseui.style.msgbox": "c4deb48cdd"
+                "baseui.style.msgbox": "a39d01b760"
             }
         },
         "c": {
