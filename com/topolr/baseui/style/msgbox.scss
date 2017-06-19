@@ -27,6 +27,8 @@
         border-radius: 2px;
         max-height: -webkit-calc(100% - 40px);
         max-width: -webkit-calc(100% - 40px);
+        display: flex;
+        flex-flow: column;
         .header {
             font-size: 17px;
             line-height: 45px;
@@ -38,6 +40,7 @@
             padding: 10px 20px 10px 20px;
             box-sizing: border-box;
             overflow: auto;
+            flex:1;
         }
         .footer {
             box-sizing: border-box;

@@ -21,16 +21,6 @@ Module({
             $.extend(module.option, this.option.content[id].option);
         }
     },
-    init: function () {
-        var ths = this;
-        var aa = function () {
-            ths.resetHeight();
-        };
-        $(window).bind("resize", aa);
-        this.onunload = function () {
-            $(window).unbind("resize", aa);
-        }
-    },
     bind_btn: function (dom) {
         if (dom.cache().type === "close") {
             this.remove();
@@ -40,17 +30,5 @@ Module({
     },
     close: function () {
         this.remove();
-    },
-    onnoderemoved: function () {
-        this.resetHeight();
-    },
-    onnodeinserted: function () {
-        this.resetHeight();
-    },
-    resetHeight: function () {
-        var body = this.finders("body"), inner = this.finders("inner"), box = this.finders("box");
-        if (inner.height() > box.height()) {
-            body.height(box.height() - 100);
-        }
     }
 });

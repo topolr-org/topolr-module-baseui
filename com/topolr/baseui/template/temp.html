@@ -8,19 +8,17 @@
 </div>
 <!--[msgbox]-->
 <div class="mask">
-    <div class="box" style="width:{{data.width}}" data-find="box">
-        <div data-find="inner">
-            <div class="header">{{data.title}}</div>
-            <div class="body" data-find="body">
-                {{list data.content as item index}}
-                <@module type="{{item.type}}" id="{{index}}"/>
-                {{/list}}
-            </div>
-            <div class="footer">
-                {{list data.btns as item}}
-                <div class="btn" data-bind="click:btn" @cache(item)>{{item.name}}</div>
-                {{/list}}
-            </div>
+    <div class="box" style="width:{{data.width}}">
+        <div class="header">{{data.title}}</div>
+        <div class="body" data-find="body">
+            {{list data.content as item index}}
+            <@module type="{{item.type}}" id="{{index}}"/>
+            {{/list}}
+        </div>
+        <div class="footer">
+            {{list data.btns as item}}
+            <div class="btn" data-bind="click:btn" @cache(item)>{{item.name}}</div>
+            {{/list}}
         </div>
     </div>
 </div>
