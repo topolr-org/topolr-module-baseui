@@ -14,7 +14,7 @@
         "d": true,
         "m": {
             "p": {
-                "icon.action": "5e38646005",
+                "icon.action": "2aeea686c3",
                 "icon.direct": "6a838ec33c",
                 "icon.editor": "d3f12ab642",
                 "icon.files": "ad163495d5",
@@ -24,21 +24,22 @@
                 "icon.test": "6cf91847ad",
                 "icon.tm": "e56fe701bb",
                 "icon.weather": "a0fbd27b12",
-                "baseui.loading": "2ff6e99a89",
-                "baseui.popup": "340634b1bd",
-                "baseui.test": "7018b3070b"
+                "baseui.loading": "06ea406188",
+                "baseui.icons.icon": "271503bd5f",
+                "baseui.popup": "521e25866f",
+                "baseui.test": "72c74439dd"
             },
             "c": {
                 "icon.style.icon": "312bbc92d8",
                 "icon.style.style": "1a26c51a6b",
-                "baseui.style.ui": "c6c0b2181e"
+                "baseui.style.ui": "3a011eec58"
             },
             "t": {
                 "icon.template.temp": "8397de88de",
-                "baseui.template.temp": "0ba5726be9"
+                "baseui.template.temp": "19bf69a61f"
             },
             "y": {
-                "baseui.style.msgbox": "2110f52f70"
+                "baseui.style.msgbox": "c5ad56b10b"
             }
         },
         "c": {
@@ -46,32 +47,21 @@
                 "p": [
                     "baseui.test",
                     "baseui.loading",
-                    "icon.loading",
-                    "icon.action",
-                    "baseui.popup",
-                    "icon.iconpreviewer",
-                    "icon.direct",
-                    "icon.editor",
-                    "icon.files",
-                    "icon.player",
-                    "icon.tm",
-                    "icon.weather"
+                    "baseui.icons.icon",
+                    "baseui.popup"
                 ],
                 "c": [
-                    "icon.style.icon",
-                    "baseui.style.ui",
-                    "icon.style.style"
+                    "baseui.style.ui"
                 ],
                 "t": [
-                    "baseui.template.temp",
-                    "icon.template.temp"
+                    "baseui.template.temp"
                 ],
                 "y": [
                     "baseui.style.msgbox"
                 ]
             }
         },
-        "id": "439aa9675bbb30301ae8342200cc29fe"
+        "id": "36dde87ef2da014cd6f71fc0846b974c"
     }
 }).boot(true);
     </script>

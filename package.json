@@ -1,6 +1,6 @@
 {
   "name": "topolr-module-baseui",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "baseui of topolr",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/topolr-org/topolr-module-baseui#readme",
   "dependencies": {
-    "topolr": "^1.4.8",
-    "topolr-module-icon": "^1.0.1"
+    "topolr": "^1.4.8"
   }
 }

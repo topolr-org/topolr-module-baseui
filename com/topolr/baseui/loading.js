@@ -1,9 +1,8 @@
 /**
  * @packet baseui.loading;
  * @css baseui.style.ui;
- * @require icon.loading;
- * @require icon.action;
  * @template baseui.template.temp;
+ * @icon baseui.icons;
  */
 Module({
     name:"area",
@@ -13,21 +12,21 @@ Module({
     autodom:true,
     showLoading:function (desc) {
         this.update({
-            icon:"mt-icon-spinner2",
+            icon:"t-icon-autorenew",
             desc:desc,
-            state:"mt-icon-spin"
+            state:"t-icon-spin"
         });
     },
     showError:function(desc){
         this.update({
-            icon:"mt-icon-times-circle",
+            icon:"t-icon-error",
             desc:desc,
             state:"icon-state-error"
         });
     },
     showSuccess:function(desc){
         this.update({
-            icon:"mt-icon-check-circle",
+            icon:"t-icon-check_circle",
             desc:desc,
             state:"icon-state-success"
         });

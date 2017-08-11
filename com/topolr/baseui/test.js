@@ -2,7 +2,6 @@
  * @packet baseui.test;
  * @require baseui.loading;
  * @require baseui.popup;
- * @require icon.iconpreviewer;
  */
 Module({
     name:"test",
@@ -23,7 +22,7 @@ Option({
                 // this.addChild({
                 //     type:"@loading.area"
                 // }).then(function (area) {
-                //     area.showError("loading...");
+                //     area.showSuccess("loading...");
                 // });
                 this.addChild({
                     type:"@popup.messagebox",
