@@ -15,6 +15,23 @@ Module({
         content: [],
         btns: [{name: "", type: ""}]
     },
+    init:function () {
+        var info=this.getQueryInfo();
+        if(info.popup){
+            info.popup=info.popup+":"+this.instanceId();
+        }else{
+            info.popup=this.instanceId();
+        }
+        var query=[];
+        for(var i in info){
+            query.push(i+"="+info[i]);
+        }
+        var url=window.location.href.substring(sitePath.length).split("?")[0]+"?"+query.join("&");
+        this._url=url;
+        this.dispatchEvent("openPage",{
+            url:url
+        });
+    },
     oninitchild: function (module) {
         var id = module.getId();
         if (this.option.content[id]) {
@@ -23,12 +40,48 @@ Module({
     },
     bind_btn: function (dom) {
         if (dom.cache().type === "close") {
-            this.remove();
+            this.close();
         } else {
             this.dispatchEvent("btn", dom.cache());
         }
     },
+    bind_back:function(){
+        this.close();
+    },
     close: function () {
-        this.remove();
+        var info=this.getQueryInfo();
+        if(info.popup){
+            window.history.back();
+        }else{
+            this.remove();
+        }
+    },
+    getQueryInfo:function () {
+        var baseurl=window.location.href.substring(sitePath.length);
+        var query=baseurl.split("?")[1];
+        if(query){
+            var _a=query.split("&");
+            var _b={};
+            for(var i=0;i<_a.length;i++){
+                var _c=_a[i].split("=");
+                _b[_c[0]]=_c[1];
+            }
+            return _b;
+        }else{
+            return {};
+        }
+    },
+    event_urlchange:function () {
+        if(window.location.href!=this._url) {
+            var info = this.getQueryInfo();
+            if (info.popup) {
+                var ids = info.popup.split(":");
+                if (ids.indexOf(this.instanceId()) === -1) {
+                    this.remove();
+                }
+            } else {
+                this.remove();
+            }
+        }
     }
 });

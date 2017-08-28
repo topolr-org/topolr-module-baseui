@@ -9,7 +9,12 @@
 <!--[msgbox]-->
 <div class="mask">
     <div class="box" style="width:{{data.width}}">
-        <div class="header">{{data.title}}</div>
+        <div class="header">
+            <div class="header-back" data-bind="click:back">
+                <svg class=":t-icon"><use xlink:href="#t-icon-arrow_back"></use></svg>
+            </div>
+            <div class="header-desc">{{data.title}}</div>
+        </div>
         <div class="body" data-find="body">
             {{list data.content as item index}}
             <@module type="{{item.type}}" id="{{index}}"/>
@@ -17,7 +22,24 @@
         </div>
         <div class="footer">
             {{list data.btns as item}}
-            <div class="btn" data-bind="click:btn" @cache(item)>{{item.name}}</div>
+            <div class="btn" data-bind="click:btn" @cache(item)>
+                <div class="btnicon">
+                    {{if item.icon}}
+                    {{if item.type==='close'}}
+                    <svg class=":t-icon"><use xlink:href="#t-icon-cancel"></use></svg>
+                    {{else}}
+                    <svg class=":t-icon"><use xlink:href="#t-icon-{{item.icon}}"></use></svg>
+                    {{/if}}
+                    {{else}}
+                    {{if item.type==='close'}}
+                    <svg class=":t-icon"><use xlink:href="#t-icon-cancel"></use></svg>
+                    {{else}}
+                    <svg class=":t-icon"><use xlink:href="#t-icon-check_circle"></use></svg>
+                    {{/if}}
+                    {{/if}}
+                </div>
+                <div class="btndec">{{item.name}}</div>
+            </div>
             {{/list}}
         </div>
     </div>

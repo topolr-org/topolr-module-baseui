@@ -28,15 +28,25 @@
         border-radius: 2px;
         max-height: -webkit-calc(100% - 40px);
         max-width: -webkit-calc(100% - 40px);
-        min-height:500px;
         display: flex;
         flex-flow: column;
         .header {
             font-size: 17px;
             line-height: 45px;
-            padding: 0 20px 0 20px;
             font-weight: 400;
             border-bottom: 1px solid #D7D7D7;
+            .header-back{
+                display: inline-block;
+                vertical-align: top;
+                width:45px;
+                text-align: center;
+                display: none;
+            }
+            .header-desc{
+                display: inline-block;
+                vertical-align: top;
+                padding:0 20px 0 20px;
+            }
         }
         .body {
             padding: 10px 20px 10px 20px;
@@ -73,6 +83,17 @@
                 overflow: hidden;
                 background-color: rgba(0, 0, 0, 0);
                 text-align: center;
+                white-space: nowrap;
+                .btnicon{
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size:20px;
+                    display: none;
+                }
+                .btndec{
+                    display: inline-block;
+                    vertical-align: top;
+                }
                 &:hover {
                     background: #EBEBEB;
                 }
@@ -83,8 +104,41 @@
 @media only screen and (max-width: 480px) {
     .mask {
         .box {
-            max-height: -webkit-calc(100% - 20px);
-            max-width: -webkit-calc(100% - 20px);
+            max-height: -webkit-calc(100%);
+            max-width: -webkit-calc(100%);
+            width:100%;
+            height:100%;
+            .header {
+                .header-back{
+                    display: inline-block;
+                    font-size:20px;
+                }
+                .header-desc{
+                    padding:0;
+                }
+            }
+            .footer{
+                position:absolute;
+                top:0;
+                right:0;
+                padding:0;
+                width:auto;
+                color:#136375;
+                .btn{
+                    line-height:46px;
+                    height:auto;
+                    min-width:auto;
+                    padding:0 10px 0 10px;
+                    .btnicon{
+                        display: inline-block;
+                        vertical-align: top;
+                        display: inline-block;
+                    }
+                    .btndec{
+                        display:none;
+                    }
+                }
+            }
         }
     }
 }
