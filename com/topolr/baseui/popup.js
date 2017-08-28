@@ -3,6 +3,27 @@
  * @style baseui.style.msgbox;
  * @template baseui.template.temp;
  */
+(function () {
+    var query = window.location.href.split("?")[1];
+    if (query) {
+        var _a = query.split("&"),_b={};
+        for (var i = 0; i < _a.length; i++) {
+            var _c = _a[i].split("=");
+            _b[_c[0]] = _c[1];
+        }
+        var querystr=[];
+        for(var i in _b){
+            if(i!=="popup") {
+                querystr.push(i + "=" + _b[i]);
+            }
+        }
+        if(querystr.length>0) {
+            window.history.replaceState({}, "", window.location.href.split("?")[0] + "?" + querystr.join("&"));
+        }else{
+            window.history.replaceState({}, "", window.location.href.split("?")[0]);
+        }
+    }
+})();
 Module({
     name: "messagebox",
     extend: "viewgroup",
@@ -85,27 +106,3 @@ Module({
         }
     }
 });
-
-module.exports = {
-    resetPopups: function () {
-        var query = window.location.href.split("?")[1];
-        if (query) {
-            var _a = query.split("&"),_b={};
-            for (var i = 0; i < _a.length; i++) {
-                var _c = _a[i].split("=");
-                _b[_c[0]] = _c[1];
-            }
-            var querystr=[];
-            for(var i in _b){
-                if(i!=="popup") {
-                    querystr.push(i + "=" + _b[i]);
-                }
-            }
-            if(querystr.length>0) {
-                window.history.replaceState({}, "", window.location.href.split("?")[0] + "?" + querystr.join("&"));
-            }else{
-                window.history.replaceState({}, "", window.location.href.split("?")[0]);
-            }
-        }
-    }
-};
