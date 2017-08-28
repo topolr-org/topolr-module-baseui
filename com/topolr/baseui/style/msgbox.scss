@@ -129,6 +129,7 @@
                     }
                     .header-desc {
                         padding: 0;
+                        font-size: 14px;
                     }
                 }
                 .footer {
@@ -149,6 +150,9 @@
                             display: inline-block;
                         }
                         .btndec {
+                            display: none;
+                        }
+                        &.closebtn{
                             display: none;
                         }
                     }

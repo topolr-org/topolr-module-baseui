@@ -22,7 +22,7 @@
         </div>
         <div class="footer">
             {{list data.btns as item}}
-            <div class="btn" data-bind="click:btn" @cache(item)>
+            <div class="btn{{item.type==='close'?' closebtn':''}}" data-bind="click:btn" @cache(item)>
                 <div class="btnicon">
                     {{if item.icon}}
                     {{if item.type==='close'}}
