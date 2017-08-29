@@ -1,6 +1,7 @@
 /**
  * @packet baseui.popup;
  * @style baseui.style.msgbox;
+ * @style baseui.style.alert;
  * @template baseui.template.temp;
  */
 (function () {
@@ -57,7 +58,7 @@ Module({
         });
         var ths=this;
         setTimeout(function () {
-            ths.dom.addClass("messagebox-open");
+            ths.dom.addClass(ths.className+"-open");
         },0);
     },
     oninitchild: function (module) {
@@ -90,7 +91,7 @@ Module({
             time:300
         }).done(function () {
             ths.remove();
-        }).scope().removeClass("messagebox-open");
+        }).scope().removeClass(this.className+"-open");
     },
     getQueryInfo: function () {
         var baseurl = window.location.href.substring(sitePath.length);
@@ -119,5 +120,18 @@ Module({
                 this.removeIt();
             }
         }
+    }
+});
+Module({
+    name:'alert',
+    extend:"@.messagebox",
+    layout:"@temp.alert",
+    className:"alert",
+    style:"@alert",
+    option:{
+        width: "500px",
+        title: "系统提示",
+        content: "this is alert",
+        btns: [{name: "", type: ""}]
     }
 });

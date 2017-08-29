@@ -44,3 +44,15 @@
         </div>
     </div>
 </div>
+<!--[alert]-->
+<div class="mask">
+    <div class="box" style="width:{{data.width}}">
+        <div class="header">{{data.title}}</div>
+        <div class="body" data-find="body">{{data.content}}</div>
+        <div class="footer">
+            {{list data.btns as item}}
+            <div class="btn" data-bind="click:btn" @cache(item)>{{item.name}}</div>
+            {{/list}}
+        </div>
+    </div>
+</div>

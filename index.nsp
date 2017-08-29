@@ -14,40 +14,27 @@
         "d": true,
         "m": {
             "p": {
-                "icon.action": "2aeea686c3",
-                "icon.direct": "6a838ec33c",
-                "icon.editor": "d3f12ab642",
-                "icon.files": "ad163495d5",
-                "icon.iconpreviewer": "0d79a6d356",
-                "icon.loading": "40745a51c2",
-                "icon.player": "3f93170ca6",
-                "icon.test": "6cf91847ad",
-                "icon.tm": "e56fe701bb",
-                "icon.weather": "a0fbd27b12",
-                "baseui.loading": "06ea406188",
-                "baseui.icons.icon": "271503bd5f",
-                "baseui.popup": "521e25866f",
-                "baseui.test": "72c74439dd"
+                "baseui.loading": "306fd8166b",
+                "baseui.popup": "b3bee43d45",
+                "baseui.test": "a6acecef3d",
+                "baseui.icons.icon": "16c03d3f21"
+            },
+            "y": {
+                "baseui.style.alert": "9f90571bde",
+                "baseui.style.msgbox": "52f725fa1c"
             },
             "c": {
-                "icon.style.icon": "312bbc92d8",
-                "icon.style.style": "1a26c51a6b",
                 "baseui.style.ui": "3a011eec58"
             },
             "t": {
-                "icon.template.temp": "8397de88de",
-                "baseui.template.temp": "19bf69a61f"
-            },
-            "y": {
-                "baseui.style.msgbox": "c5ad56b10b"
+                "baseui.template.temp": "99645555dd"
             }
         },
         "c": {
-            "baseui-test-c1": {
+            "baseui-test-c2": {
                 "p": [
                     "baseui.test",
                     "baseui.loading",
-                    "baseui.icons.icon",
                     "baseui.popup"
                 ],
                 "c": [
@@ -57,11 +44,12 @@
                     "baseui.template.temp"
                 ],
                 "y": [
-                    "baseui.style.msgbox"
+                    "baseui.style.msgbox",
+                    "baseui.style.alert"
                 ]
             }
         },
-        "id": "36dde87ef2da014cd6f71fc0846b974c"
+        "id": "439aa9675bbb30301ae8342200cc29fe"
     }
 }).boot(true);
     </script>
