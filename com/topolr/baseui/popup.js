@@ -129,7 +129,7 @@ Module({
     className:"alert",
     style:"@alert",
     option:{
-        width: "500px",
+        width: "300px",
         title: "系统提示",
         content: "this is alert",
         btns: [{name: "", type: ""}]
